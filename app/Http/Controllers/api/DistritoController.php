@@ -29,7 +29,7 @@ class DistritoController extends Controller
     }
 
     // function para obtener distrito por provincia
-    public function getxProvincia($idProvincia){
+    public function getxDistrito($idProvincia){
 
         $distritos = Distrito::where('id_provincia', $idProvincia)->get();
 

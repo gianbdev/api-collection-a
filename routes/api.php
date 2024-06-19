@@ -23,7 +23,7 @@ Route::group(['prefix' => 'provincias'], function () {
 });
 
 // ENDPOINTs Distrito
-Route::get('/distritos/{id}', [DistritoController::class, 'getProvincia']);
+Route::get('/distritos/{id}', [DistritoController::class, 'getDistrito']);
 Route::group(['prefix' => 'distritos'], function () {
     Route::get('/', [DistritoController::class, 'getAllDistrito']);
     Route::get('/provincias/{idProvincia}', [DistritoController::class, 'getxDistrito']);
