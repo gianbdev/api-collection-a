@@ -8,6 +8,7 @@ use App\Http\Controllers\api\ProvinciaController;
 use App\Http\Controllers\api\BlogController;
 use App\Http\Controllers\api\DetalleBlogController;
 use App\Http\Controllers\api\DireccionController;
+use App\Http\Controllers\api\NombreInmuebleController;
 
 
 // ENDPOINTs Blog
@@ -50,6 +51,12 @@ Route::group(['prefix' => 'direcciones'], function () {
     Route::get('/distritos/{idDistrito}', [DireccionController::class, 'getxDireccion']);
 });
 
+// ENDPOINTs Nombres Inmuebles
+Route::get('/nombreInmuebles/{id}', [NombreInmuebleController::class, 'getNombreInmueble']);
+Route::group(['prefix' => 'nombreInmuebles'], function () {
+    Route::get('/', [NombreInmuebleController::class, 'getAllNombreInmueble']);
+    Route::get('/inmuebles/{idInmueble}', [NombreInmuebleController::class, 'getxNombreInmueble']);
+});
 
 
 
