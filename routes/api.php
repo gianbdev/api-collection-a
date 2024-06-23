@@ -9,6 +9,7 @@ use App\Http\Controllers\api\BlogController;
 use App\Http\Controllers\api\DetalleBlogController;
 use App\Http\Controllers\api\DireccionController;
 use App\Http\Controllers\api\NombreInmuebleController;
+use App\Http\Controllers\api\OperationTypeController;
 
 
 // ENDPOINTs Blog
@@ -59,7 +60,8 @@ Route::group(['prefix' => 'nombreInmuebles'], function () {
 });
 
 // ENDPOINTs Tipo Operacion
-
+Route::get('/operationType', [OperationTypeController::class, 'getAllOperationTypes']);
+Route::get('/operationType/{id}', [OperationTypeController::class, 'getOperationType']);
 
 
 /*
