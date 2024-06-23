@@ -7,6 +7,7 @@ use App\Http\Controllers\api\DepartamentoController;
 use App\Http\Controllers\api\ProvinciaController;
 use App\Http\Controllers\api\BlogController;
 use App\Http\Controllers\api\DetalleBlogController;
+use App\Http\Controllers\api\DireccionController;
 
 
 // ENDPOINTs Blog
@@ -41,6 +42,14 @@ Route::group(['prefix' => 'distritos'], function () {
     Route::get('/', [DistritoController::class, 'getAllDistrito']);
     Route::get('/provincias/{idProvincia}', [DistritoController::class, 'getxDistrito']);
 });
+
+// ENDPOINTs Direccion
+Route::get('/direcciones/{id}', [DireccionController::class, 'getDireccion']);
+Route::group(['prefix' => 'direcciones'], function () {
+    Route::get('/', [DireccionController::class, 'getAllDirecciones']);
+    Route::get('/distritos/{idDistrito}', [DireccionController::class, 'getxDireccion']);
+});
+
 
 
 
