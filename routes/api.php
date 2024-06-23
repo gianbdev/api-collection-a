@@ -58,6 +58,7 @@ Route::group(['prefix' => 'nombreInmuebles'], function () {
     Route::get('/inmuebles/{idInmueble}', [NombreInmuebleController::class, 'getxNombreInmueble']);
 });
 
+// ENDPOINTs Tipo Operacion
 
 
 
