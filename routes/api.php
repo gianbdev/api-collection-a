@@ -10,6 +10,7 @@ use App\Http\Controllers\api\DetalleBlogController;
 use App\Http\Controllers\api\DireccionController;
 use App\Http\Controllers\api\NombreInmuebleController;
 use App\Http\Controllers\api\OperationTypeController;
+use App\Http\Controllers\api\PropertyTypeController;
 
 
 // ENDPOINTs Blog
@@ -63,6 +64,9 @@ Route::group(['prefix' => 'nombreInmuebles'], function () {
 Route::get('/operationType', [OperationTypeController::class, 'getAllOperationTypes']);
 Route::get('/operationType/{id}', [OperationTypeController::class, 'getOperationType']);
 
+// ENDPOINTs Tipo Propiedad
+Route::get('/propertyType', [PropertyTypeController::class, 'getAllPropertyTypes']);
+Route::get('/propertyType/{id}', [PropertyTypeController::class, 'getPropertyType']);
 
 /*
 Route::get('/user', function (Request $request) {
