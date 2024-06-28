@@ -11,7 +11,7 @@ use App\Http\Controllers\api\DireccionController;
 use App\Http\Controllers\api\NombreInmuebleController;
 use App\Http\Controllers\api\OperationTypeController;
 use App\Http\Controllers\api\PropertyTypeController;
-
+use App\Http\Controllers\api\VendedorController;
 
 // ENDPOINTs Blog
 Route::get('/blog', [BlogController::class, 'getAllBlogs']);
@@ -67,6 +67,11 @@ Route::get('/operationType/{id}', [OperationTypeController::class, 'getOperation
 // ENDPOINTs Tipo Propiedad
 Route::get('/propertyType', [PropertyTypeController::class, 'getAllPropertyTypes']);
 Route::get('/propertyType/{id}', [PropertyTypeController::class, 'getPropertyType']);
+
+//ENDPOINTs Vendedor
+Route::get('/vendedor', [VendedorController::class, 'getAllVendedores']);
+Route::get('/vendedor/{id}', [VendedorController::class, 'getVendedor']);
+
 
 /*
 Route::get('/user', function (Request $request) {
