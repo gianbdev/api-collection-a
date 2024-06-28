@@ -8,6 +8,7 @@ use App\Http\Controllers\api\ProvinciaController;
 use App\Http\Controllers\api\BlogController;
 use App\Http\Controllers\api\DetalleBlogController;
 use App\Http\Controllers\api\DireccionController;
+use App\Http\Controllers\api\ImImageController;
 use App\Http\Controllers\api\NombreInmuebleController;
 use App\Http\Controllers\api\OperationTypeController;
 use App\Http\Controllers\api\PropertyTypeController;
@@ -71,6 +72,10 @@ Route::get('/propertyType/{id}', [PropertyTypeController::class, 'getPropertyTyp
 //ENDPOINTs Vendedor
 Route::get('/vendedor', [VendedorController::class, 'getAllVendedores']);
 Route::get('/vendedor/{id}', [VendedorController::class, 'getVendedor']);
+
+// ENDPOINTs Imagenes Inmuebles
+Route::get('/immovableImage', [ImImageController::class, 'getAllImmovablesImages']);
+Route::get('/immovableImage/{id}', [ImImageController::class, 'getImmovableImage']);
 
 
 /*
