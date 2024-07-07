@@ -10,7 +10,9 @@ class BlogController extends Controller
 {
     // function para obtener todos los blogs
     public function getAllBlogs(){
+
         $blogs = Blog::all();
+
 
         return response()->json($blogs);
     }
@@ -21,9 +23,12 @@ class BlogController extends Controller
         $blog = Blog::find($id);
 
         if (!$blog) {
+
             return response()->json(['message' => 'Blog not found'], 404);
+
         }
 
         return response()->json($blog);
+
     }
 }

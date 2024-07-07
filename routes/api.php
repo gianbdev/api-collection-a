@@ -8,8 +8,11 @@ use App\Http\Controllers\api\ProvinciaController;
 use App\Http\Controllers\api\BlogController;
 use App\Http\Controllers\api\DetalleBlogController;
 use App\Http\Controllers\api\DireccionController;
+use App\Http\Controllers\api\ImImageController;
 use App\Http\Controllers\api\NombreInmuebleController;
-
+use App\Http\Controllers\api\OperationTypeController;
+use App\Http\Controllers\api\PropertyTypeController;
+use App\Http\Controllers\api\VendedorController;
 
 // ENDPOINTs Blog
 Route::get('/blog', [BlogController::class, 'getAllBlogs']);
@@ -58,7 +61,21 @@ Route::group(['prefix' => 'nombreInmuebles'], function () {
     Route::get('/inmuebles/{idInmueble}', [NombreInmuebleController::class, 'getxNombreInmueble']);
 });
 
+// ENDPOINTs Tipo Operacion
+Route::get('/operationType', [OperationTypeController::class, 'getAllOperationTypes']);
+Route::get('/operationType/{id}', [OperationTypeController::class, 'getOperationType']);
 
+// ENDPOINTs Tipo Propiedad
+Route::get('/propertyType', [PropertyTypeController::class, 'getAllPropertyTypes']);
+Route::get('/propertyType/{id}', [PropertyTypeController::class, 'getPropertyType']);
+
+//ENDPOINTs Vendedor
+Route::get('/vendedor', [VendedorController::class, 'getAllVendedores']);
+Route::get('/vendedor/{id}', [VendedorController::class, 'getVendedor']);
+
+// ENDPOINTs Imagenes Inmuebles
+Route::get('/immovableImage', [ImImageController::class, 'getAllImmovablesImages']);
+Route::get('/immovableImage/{id}', [ImImageController::class, 'getImmovableImage']);
 
 
 /*
