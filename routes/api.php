@@ -18,11 +18,9 @@ use App\Http\Controllers\api\VendedorController;
 Route::get('/blog', [BlogController::class, 'getAllBlogs']);
 Route::get('/blog/{id}', [BlogController::class, 'getBlog']);
 
-
 // ENDPOINTs Departamento
 Route::get('/departamento', [DepartamentoController::class, 'getAllDepartamentos']);
 Route::get('/departamento/{idDepartamento}', [DepartamentoController::class, 'getDepartamento']);
-
 
 // ENDPOINTs Detalle Blog
 Route::get('/detallesBlog/{id}', [DetalleBlogController::class, 'getDetalleBlog']);
@@ -31,14 +29,12 @@ Route::group(['prefix' => 'detallesBlog'], function () {
     Route::get('/blog/{idBlog}', [DetalleBlogController::class, 'getxBlog']);
 });
 
-
 // ENDPOINTs Provincia
 Route::get('/provincias/{id}', [ProvinciaController::class, 'getProvincia']);
 Route::group(['prefix' => 'provincias'], function () {
     Route::get('/', [ProvinciaController::class, 'listarTodas']);
     Route::get('/departamento/{idDepartamento}', [ProvinciaController::class, 'getxDepartamento']);
 });
-
 
 // ENDPOINTs Distrito
 Route::get('/distritos/{id}', [DistritoController::class, 'getDistrito']);
@@ -77,6 +73,7 @@ Route::get('/vendedor/{id}', [VendedorController::class, 'getVendedor']);
 Route::get('/immovableImage', [ImImageController::class, 'getAllImmovablesImages']);
 Route::get('/immovableImage/{id}', [ImImageController::class, 'getImmovableImage']);
 
+// FINAL ENDPOINT
 
 /*
 Route::get('/user', function (Request $request) {
